@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f57687aaea90478fb6fd1aab610c0036" Name="Diagram1">
+        <EntityTypeShape EntityType="SampleDataModel.Customers" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SampleDataModel.OrderItems" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SampleDataModel.Orders" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SampleDataModel.Products" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SampleDataModel.Vendors" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="SampleDataModel.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SampleDataModel.FK_OrderItems_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SampleDataModel.FK_OrderItems_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SampleDataModel.FK_Products_Vendors" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

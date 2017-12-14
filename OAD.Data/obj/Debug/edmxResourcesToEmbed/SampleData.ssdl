@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="cust_id" />
+    </Key>
+    <Property Name="cust_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="cust_name" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="cust_address" Type="char" MaxLength="50" />
+    <Property Name="cust_city" Type="char" MaxLength="50" />
+    <Property Name="cust_state" Type="char" MaxLength="5" />
+    <Property Name="cust_zip" Type="char" MaxLength="10" />
+    <Property Name="cust_country" Type="char" MaxLength="50" />
+    <Property Name="cust_contact" Type="char" MaxLength="50" />
+    <Property Name="cust_email" Type="char" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="OrderItems">
+    <Key>
+      <PropertyRef Name="order_num" />
+      <PropertyRef Name="order_item" />
+    </Key>
+    <Property Name="order_num" Type="int" Nullable="false" />
+    <Property Name="order_item" Type="int" Nullable="false" />
+    <Property Name="prod_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="item_price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_num" />
+    </Key>
+    <Property Name="order_num" Type="int" Nullable="false" />
+    <Property Name="order_date" Type="datetime" Nullable="false" />
+    <Property Name="cust_id" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="prod_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="vend_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="prod_name" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="prod_price" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="prod_desc" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Vendors">
+    <Key>
+      <PropertyRef Name="vend_id" />
+    </Key>
+    <Property Name="vend_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="vend_name" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="vend_address" Type="char" MaxLength="50" />
+    <Property Name="vend_city" Type="char" MaxLength="50" />
+    <Property Name="vend_state" Type="char" MaxLength="5" />
+    <Property Name="vend_zip" Type="char" MaxLength="10" />
+    <Property Name="vend_country" Type="char" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_OrderItems_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_num" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="order_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItems_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="OrderItems" Type="Self.OrderItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="prod_id" />
+      </Principal>
+      <Dependent Role="OrderItems">
+        <PropertyRef Name="prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="cust_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="cust_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Vendors">
+    <End Role="Vendors" Type="Self.Vendors" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendors">
+        <PropertyRef Name="vend_id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="vend_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SampleDataModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_OrderItems_Orders" Association="Self.FK_OrderItems_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItems_Products" Association="Self.FK_OrderItems_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Customers" Association="Self.FK_Orders_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Vendors" Association="Self.FK_Products_Vendors">
+      <End Role="Vendors" EntitySet="Vendors" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

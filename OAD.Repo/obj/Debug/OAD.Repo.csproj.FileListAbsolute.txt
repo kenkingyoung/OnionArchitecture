@@ -1,0 +1,14 @@
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Repo.dll.config
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Repo.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Repo.pdb
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\EntityFramework.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Data.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Data.pdb
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\OAD.Data.dll.config
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\EntityFramework.xml
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\obj\Debug\OAD.Repo.csprojResolveAssemblyReference.cache
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\obj\Debug\OAD.Repo.csproj.CoreCompileInputs.cache
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\obj\Debug\OAD.Repo.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Repo\obj\Debug\OAD.Repo.pdb

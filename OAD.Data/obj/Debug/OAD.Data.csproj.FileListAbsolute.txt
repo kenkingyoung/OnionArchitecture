@@ -1,0 +1,12 @@
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\OAD.Data.dll.config
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\OAD.Data.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\OAD.Data.pdb
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\EntityFramework.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\EntityFramework.xml
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\obj\Debug\OAD.Data.csproj.CoreCompileInputs.cache
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\obj\Debug\OAD.Data.dll
+C:\Users\genqing.yang\Desktop\OnionArchitectureDemoInMVC\OAD.Data\obj\Debug\OAD.Data.pdb

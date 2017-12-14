@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleDataModelStoreContainer" CdmEntityContainer="SampleDataEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="SampleDataModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="cust_name" ColumnName="cust_name" />
+          <ScalarProperty Name="cust_address" ColumnName="cust_address" />
+          <ScalarProperty Name="cust_city" ColumnName="cust_city" />
+          <ScalarProperty Name="cust_state" ColumnName="cust_state" />
+          <ScalarProperty Name="cust_zip" ColumnName="cust_zip" />
+          <ScalarProperty Name="cust_country" ColumnName="cust_country" />
+          <ScalarProperty Name="cust_contact" ColumnName="cust_contact" />
+          <ScalarProperty Name="cust_email" ColumnName="cust_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="SampleDataModel.OrderItems">
+        <MappingFragment StoreEntitySet="OrderItems">
+          <ScalarProperty Name="order_num" ColumnName="order_num" />
+          <ScalarProperty Name="order_item" ColumnName="order_item" />
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="item_price" ColumnName="item_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="SampleDataModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="order_num" ColumnName="order_num" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="SampleDataModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="vend_id" ColumnName="vend_id" />
+          <ScalarProperty Name="prod_name" ColumnName="prod_name" />
+          <ScalarProperty Name="prod_price" ColumnName="prod_price" />
+          <ScalarProperty Name="prod_desc" ColumnName="prod_desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendors">
+      <EntityTypeMapping TypeName="SampleDataModel.Vendors">
+        <MappingFragment StoreEntitySet="Vendors">
+          <ScalarProperty Name="vend_id" ColumnName="vend_id" />
+          <ScalarProperty Name="vend_name" ColumnName="vend_name" />
+          <ScalarProperty Name="vend_address" ColumnName="vend_address" />
+          <ScalarProperty Name="vend_city" ColumnName="vend_city" />
+          <ScalarProperty Name="vend_state" ColumnName="vend_state" />
+          <ScalarProperty Name="vend_zip" ColumnName="vend_zip" />
+          <ScalarProperty Name="vend_country" ColumnName="vend_country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
